@@ -68,14 +68,31 @@ print(f'\nPara conferência, a lista é a seguinte:\n{dado}')
 #5. Faça um programa que leia uma lista vet de 10 números inteiros. O programa deve gerar, a partir da lista lida, uma outra lista pos que contenha apenas os valores
 #inteiros positivos de vet. A partir do vetor pos, deve ser gerado uma outra lista semdup que contenha apenas uma ocorrência de cada valor de pos.
 
+'''
 vet = [-1,-4,-3,-2,-1,1,2,3,4,1]
 pos = []
-
 
 for valores in vet:
     if valores > 0:
         pos.append(valores)
+
 semdup = set(pos)
     
 print(f'Os valores inteiros posivitos são: {pos}')
 print(f'E contendo apenas uma ocorrêmnia: {semdup}')
+'''
+
+#6. Faça um Programa que leia um vetor de 5 números inteiros, mostre a soma, a multiplicação e os números.
+
+'''
+numeros = [19,73,82,46,5]
+soma = sum(numeros)
+produto = 1
+
+for numero in numeros:
+    produto *= numero
+
+
+print(f'A soma dos numeros da lista é: {soma} e o produto de sua multiplicação é {produto}.')
+print(f'Os números são:\n{numeros}')
+'''
