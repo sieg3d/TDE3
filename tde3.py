@@ -64,3 +64,18 @@ po = (numero_seis/50)*100
 print(f'O face 6 foi sorteada um total de {numero_seis}x e o seu percentual de ocorrencia foi {po:.2f}%.')
 print(f'\nPara conferência, a lista é a seguinte:\n{dado}')
 '''
+
+#5. Faça um programa que leia uma lista vet de 10 números inteiros. O programa deve gerar, a partir da lista lida, uma outra lista pos que contenha apenas os valores
+#inteiros positivos de vet. A partir do vetor pos, deve ser gerado uma outra lista semdup que contenha apenas uma ocorrência de cada valor de pos.
+
+vet = [-1,-4,-3,-2,-1,1,2,3,4,1]
+pos = []
+
+
+for valores in vet:
+    if valores > 0:
+        pos.append(valores)
+semdup = set(pos)
+    
+print(f'Os valores inteiros posivitos são: {pos}')
+print(f'E contendo apenas uma ocorrêmnia: {semdup}')
