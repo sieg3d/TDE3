@@ -46,3 +46,21 @@ print(f'O número 3 foi digitado pela primeira vez na posição {nova_lista.inde
 print(f'Os números pares são: {c}')
 '''
 
+#4. Um dado é lançado 50 vezes, e o valor correspondente é armazenado em uma lista.
+#Faça um programa que determine o percentual de ocorrências de face 6 do dado dentre esses 50 lançamentos.
+
+'''
+import random
+
+dado = []
+numero_seis = 0
+for lancamento in range(50):
+    lado = random.randint(1,6)
+    dado.append(lado)
+    if lado == 6:
+        numero_seis+=1
+po = (numero_seis/50)*100
+
+print(f'O face 6 foi sorteada um total de {numero_seis}x e o seu percentual de ocorrencia foi {po:.2f}%.')
+print(f'\nPara conferência, a lista é a seguinte:\n{dado}')
+'''
