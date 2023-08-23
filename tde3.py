@@ -126,21 +126,22 @@ print(f'E as suas respectivas idades são: {idades}')
 #O programa deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser
 #classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
 
+'''
 pessoa = []
 
 a = input('Telefonou para a vítima? S/N ')
 if a == 's':
     pessoa.append(1)
-b = input('Esteve no local do crime? S/N')
+b = input('Esteve no local do crime? S/N ')
 if b == 's':
     pessoa.append(1)
-c = input('Mora perto da vítima? S/N')
+c = input('Mora perto da vítima? S/N ')
 if c == 's':
      pessoa.append(1)
-d = input('Devia para a vítima? S/N')
+d = input('Devia para a vítima? S/N ')
 if d == 's':
     pessoa.append(1)
-e = input('Já trabalhou com a vítima? S/N')
+e = input('Já trabalhou com a vítima? S/N ')
 if e == 's':
     pessoa.append(1)
 
@@ -152,9 +153,36 @@ elif sum(pessoa) == 2:
     print('Não sei Rick. Parece suspeito!')
 else:
     print('Sabe de nada! Inocente!')
+'''
+
+#9. Faça um programa que simule um lançamento de dados. Lance o dado 10 vezes e armazene os resultados em um vetor.
+#Depois, monte um outro vetor contendo quantas vezes cada valor foi obtido. Imprima os dois vetores.
+# Use uma função para gerar números aleatórios, simulando os lançamentos dos dados.
+#Exemplo de uma possível saída:
+#[3, 1, 5, 3, 5, 4, 5, 5, 3, 6]
+#[1, 0, 3, 1, 4, 1]
 
 
+import random
 
+dado = []
+lancamentos = [0]*6
 
+for lance in range(10):
+    numero = random.randint(1,6)
+    dado.append(numero)
+    if numero == 1:
+        lancamentos[0] += 1
+    elif numero == 2:
+        lancamentos[1] += 1
+    elif numero == 3:
+        lancamentos[2] += 1
+    elif numero == 4:
+        lancamentos[3] += 1
+    elif numero == 5:
+        lancamentos[4] += 1
+    elif numero == 6:
+        lancamentos[5] += 1
 
-
+print(f'Os números sorteados foram: {dado}')
+print(f'Segue sequencia de quantidade de sorteios para cada numero: {lancamentos}')
