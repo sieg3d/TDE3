@@ -96,3 +96,65 @@ for numero in numeros:
 print(f'A soma dos numeros da lista é: {soma} e o produto de sua multiplicação é {produto}.')
 print(f'Os números são:\n{numeros}')
 '''
+
+#7. Faça um Programa que peça a idade e a altura de 5 pessoas, armazene cada informação no seu respectivo vetor. Imprima a idade e a altura na ordem inversa a ordem lida.
+
+'''
+alturas = []
+idades= []
+
+for inf in range(5):
+    idade = int(input(f'Insira a idade da {inf+1}ª pessoa: '))
+    altura = float(input(f'Agora insira a altura da {inf+1}ª pessoa: '))
+    idades.append(idade)
+    alturas.append(altura)
+
+alturas.reverse()
+idades.reverse()
+
+print(f'As alturas inseridas foram: {alturas}')
+print(f'E as suas respectivas idades são: {idades}')
+'''
+
+#8. Utilizando listas, faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+#a) "Telefonou para a vítima?"
+#b) "Esteve no local do crime?"
+#c) "Mora perto da vítima?"
+#d) "Devia para a vítima?"
+#e) "Já trabalhou com a vítima?"
+
+#O programa deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser
+#classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
+
+pessoa = []
+
+a = input('Telefonou para a vítima? S/N ')
+if a == 's':
+    pessoa.append(1)
+b = input('Esteve no local do crime? S/N')
+if b == 's':
+    pessoa.append(1)
+c = input('Mora perto da vítima? S/N')
+if c == 's':
+     pessoa.append(1)
+d = input('Devia para a vítima? S/N')
+if d == 's':
+    pessoa.append(1)
+e = input('Já trabalhou com a vítima? S/N')
+if e == 's':
+    pessoa.append(1)
+
+if sum(pessoa) == 5:
+    print('Ah-há! Você é o Assassino!')
+elif sum(pessoa) <= 4 and sum(pessoa) >= 3:
+    print('Ora ora... temos um cumplice')
+elif sum(pessoa) == 2:
+    print('Não sei Rick. Parece suspeito!')
+else:
+    print('Sabe de nada! Inocente!')
+
+
+
+
+
+
