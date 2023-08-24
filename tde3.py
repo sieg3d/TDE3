@@ -162,7 +162,7 @@ else:
 #[3, 1, 5, 3, 5, 4, 5, 5, 3, 6]
 #[1, 0, 3, 1, 4, 1]
 
-
+'''
 import random
 
 dado = []
@@ -186,3 +186,37 @@ for lance in range(10):
 
 print(f'Os números sorteados foram: {dado}')
 print(f'Segue sequencia de quantidade de sorteios para cada numero: {lancamentos}')
+'''
+
+#10. Faça um programa que percorre um vetor e imprime na tela o valor mais próximo da média dos valores do vetor.
+#Exemplo:
+#vetor = [2.5, 7.5, 10.0, 4.0]
+#média = 6.0
+#Valor mais próximo da média = 7.5
+
+
+qtd = int(input('Digite a quantidade de posições que terá a sua lista: '))
+vetor = []
+total = 0
+media = 0
+menor_distancia = 0
+
+print(qtd)
+
+for valor in range(qtd):
+    numero = float(input(f'Digite o número {valor+1}'))
+    vetor.append(numero)
+    total += numero
+
+media = total / qtd
+print(total)
+print(media)
+
+for valor in range(qtd):
+    distancia = abs(vetor[valor] - media)
+    if menor_distancia ==0 or distancia < menor_distancia:
+         menor_distancia = distancia
+
+print(f'{total:.2f}')
+print(media)
+print(menor_distancia)
