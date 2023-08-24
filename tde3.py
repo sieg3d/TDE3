@@ -194,29 +194,30 @@ print(f'Segue sequencia de quantidade de sorteios para cada numero: {lancamentos
 #média = 6.0
 #Valor mais próximo da média = 7.5
 
-
+'''
 qtd = int(input('Digite a quantidade de posições que terá a sua lista: '))
 vetor = []
 total = 0
-media = 0
-menor_distancia = 0
+valor_proximo = 0
+menor_distancia = float('inf')
 
 print(qtd)
 
 for valor in range(qtd):
-    numero = float(input(f'Digite o número {valor+1}'))
+    numero = float(input(f'Digite o {valor+1}º número: '))
     vetor.append(numero)
     total += numero
 
 media = total / qtd
-print(total)
-print(media)
 
-for valor in range(qtd):
-    distancia = abs(vetor[valor] - media)
-    if menor_distancia ==0 or distancia < menor_distancia:
+
+for valor in vetor:
+    distancia = abs(valor - media)
+    if distancia < menor_distancia:
          menor_distancia = distancia
+         valor_proximo = valor
 
-print(f'{total:.2f}')
-print(media)
-print(menor_distancia)
+print(f'Os números inseridos foram: {vetor}')
+print(f'A sua média é: {media}.')
+print(f'E o número digitado de valor mais próximo da média é: {valor_proximo}.')
+'''
